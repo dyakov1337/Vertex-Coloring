@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#click" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane fx:id="menuPane" layoutX="666.0" layoutY="442.0" prefHeight="159.0" prefWidth="134.0" visible="false">
+         <children>
+            <Button layoutX="2.0" layoutY="101.0" mnemonicParsing="false" onAction="#colorVertexes" text="Покрасить вершины" />
+            <Label fx:id="textVertex" layoutX="3.0" text="Число вершин: 0" />
+            <Label fx:id="textEdge" layoutX="3.0" layoutY="15.0" text="Число ребер: 0" />
+            <Label layoutX="4.0" layoutY="44.0" text="Режим:" />
+            <RadioButton fx:id="rbVertex" layoutX="3.0" layoutY="61.0" mnemonicParsing="false" onAction="#getMode" selected="true" text="Вершины">
+               <toggleGroup>
+                  <ToggleGroup fx:id="mode" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbEdge" layoutX="3.0" layoutY="79.0" mnemonicParsing="false" onAction="#getMode" text="Ребра" toggleGroup="$mode" />
+            <Button layoutX="109.0" layoutY="2.0" mnemonicParsing="false" onAction="#hideMenu" text="X" />
+            <Button fx:id="btnDelete" layoutX="2.0" layoutY="131.0" mnemonicParsing="false" onAction="#removeGraph" prefHeight="25.0" prefWidth="129.0" text="Удалить граф" />
+            <Label fx:id="textColors" layoutX="4.0" layoutY="29.0" text="Кол-во цветов: 0" />
+         </children>
+      </Pane>
+      <Button fx:id="btnShow" layoutX="729.0" layoutY="561.0" mnemonicParsing="false" onAction="#showMenu" text="Меню ↑" />
+   </children>
+</Pane>
